@@ -47,7 +47,7 @@ for TC in range(T):
                         del (li_st[i])
                         status = False
                         continue
-                    else:          abb b bba x
+                    else:        
                         result = 1
                         status = False
                         break
