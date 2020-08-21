@@ -2,6 +2,8 @@
 
 # 00_django_intro
 
+
+
 > 2020.08.14
 
 ## Intro
