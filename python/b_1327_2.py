@@ -1,43 +1,42 @@
-def make_str(num_list):
-    s = ""
-    for i in num_list:
-        s += str(i)
-    return s
-
-
-def partial_reverse(num_list, n):
-    for i in range(K//2):
-        num_list[n+i], num_list[n+K-i-1] = num_list[n+K-i-1], num_list[n+i]
-    return num_list
-
-
-def solve(s):
-    queue = []
-    visited[make_str(s)] = 1
-    queue.append(s)
-    ans = sorted(s)
-
-    cnt = -1
-    while len(queue) != 0:
-        qsize = len(queue)
-        cnt += 1
-        for _ in range(qsize):
-            cur = queue.pop(0)
-            if cur == ans:
-                return cnt
-            for i in range(N - K + 1):
-                copied = cur[:]
-                partial_reverse(copied, i)
-                key = make_str(copied)
-                if key in visited:
-                    continue
-                visited[key] = 1
-                queue.append(copied)
-    return -1
-
-
 N, K = map(int, input().split())
-seq = list(map(int, input().split()))
-visited = {}
 
-print(solve(seq))
+li = list(map(str, input().split()))
+
+
+stack = set()
+li_sr = sorted(li)
+
+
+v = []
+v2 = []
+v.append(li)
+stack.add(''.join(li))
+result = 0
+cnt = 1
+if li == li_sr:
+    cnt = 0
+while li != li_sr:
+    if result == 1:
+        break
+    if len(v) == 0:
+        cnt += 1
+        v = v2[::]
+        v2 = []
+        if len(v) == 0:
+            cnt = -1
+            break
+
+    test = v.pop(0)
+    for i in range(len(test)-K+1):  # 0 ~ 7 K = 3 6 0 1 2 3 4 5
+        test_a = test[::]
+        for j in range(K//2):
+            test_a[i+j], test_a[i+K-1-j] = test[i+K-1-j], test[i+j]
+        if test_a == li_sr:
+            result = 1
+            break
+        s = ''.join(test_a)
+        if s not in stack:
+            stack.add(s)
+            v2.append(list(s))
+
+print(cnt)
