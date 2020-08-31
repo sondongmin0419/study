@@ -1,32 +1,37 @@
-N = 6
+N = 4
 
 
-def play():
-    if len(v) == 15 and " ".join(v) not in result:
-        result.add(" ".join(v))
-        # print(result)
-        v.pop()
-        return 0
-
+def play(li_test):
     for k in range(3):
-        if li_c[k] == 1:
-            v.append('1')
-            play()
-        elif li_c[k] == 0:
-            v.append('0')
-            play()
-        elif li_c[k] == -1:
-            v.append('-1')
-            play()
-    v.pop()
+        if li_test[0] != 0:
+            v.append(1)
+            li_test[0] -= 1
+            play(li_test)
+        elif li_test[1] != 0:
+            v.append(0)
+            li_test[1] -= 1
+            play(li_test)
+        elif li_test[2] != 0:
+            v.append(-1)
+            li_test[2] -= 1
+            play(li_test)
+        pass
 
-li = [[0, 0, 0] for _ in range(6)]
+for TC in range(4):
+    li = list(map(int, input().split()))
 
-li_c = [1, 0, -1]
-v = []
-result = set()
-#  ab ac ad ae af bc bd be bf cd ce cf de df ef
+    li_1 = [[0]*3 for _ in range(6)]
+    for i in range(5):
+        for j in range(3):
+            li_1[i][j] = li[i*3+j]
 
-#승 무 패
-play()
-print(result)
+    print(li_1)
+    v = []
+    for i in range(li_1[0][0]):
+
+    play(li_1[0])
+
+
+
+    #  ab ac ad ae af   bc bd be bf   cd ce cf   de df   ef
+
