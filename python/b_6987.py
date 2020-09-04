@@ -25,6 +25,7 @@ def play():
                 result = 1
                 return
             return
+
     for k in range(3):
         if li_c[k] == 1:
             v.append('1')
@@ -44,13 +45,16 @@ def play():
             i = 3
         else:
             i = 4
+
         j = (v_i - 1+i) % 5
+
         if i == 0:
             j += 1
-        if i == 3:
+        elif i == 3:
             j += 1
-        if i == 4:
+        elif i == 4:
             j = 1
+
         if li_c[k] == 1:
             li_2[i][0] += 1
             li_2[j+i][2] += 1
@@ -73,11 +77,8 @@ def play():
     else:
         return 0
 
+# ab ac ad ae af bc bd be bf cd ce cf de df ef
 
-
-#  ab ac ad ae af  bc bd be bf   cd ce cf  de df  ef
-#  1  1  1  1  1 / 0 1  1  1  0 /
-#
 for TC in range(4):
 
     li_c = [1, 0, -1]
