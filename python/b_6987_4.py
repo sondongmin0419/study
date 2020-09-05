@@ -1,5 +1,3 @@
-
-
 def play(li_test):
     for k in range(3):
         if li_test[0] != 0:
