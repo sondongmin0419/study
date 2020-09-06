@@ -64,6 +64,7 @@ for TC in range(1, T+1):
                 break
             if li[y+q][x+q] == '':
                 break
+                
         for q in range(1, N):
             if li[y+q][x-q] == li[y][x]:
                 dl_xy = [True, q]
