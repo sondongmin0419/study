@@ -1,19 +1,19 @@
 import sys
-sys.stdin = open("input_2.txt", "r")
+sys.stdin = open("input_3752.txt", "r")
 
 T = int(input())
 
 for TC in range(1, T+1):
-    N = int(input())
-    li = list(map(int, input().split()))
-    li_li = []
-    li_set = set(li)
-    for i in range(len(li_set)):
-        test = li_set.pop()
-        li_li.append([test, li.count(test)])
 
-    total = 1
-    print(li_li)
-    for i in range(len(li_li)):
-        total *= (li_li[i][1]+1)
-    print(total)
+    N = int(input())
+
+    score_li = list(map(int, input().split()))
+    score_max = sum(score_li)
+    score_sum = [0] * (score_max+1)
+    score_sum[0] = 1
+    for j in range(N):
+        for i in range(len(score_sum)-1,-1,-1):
+            if score_sum[i] == 1:
+                score_sum[i+score_li[j]] = 1
+
+    print('#%d %d' % (TC, score_sum.count(1)))
