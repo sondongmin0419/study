@@ -2,6 +2,7 @@ def solution(info, query):
     answer = [0] * len(query)
     li_li_li = [[[[[] for _ in range(4)] for _ in range(4)] for _ in range(4)] for _ in range(4)]
 
+
     def play (p_s):
         if p_s == 'cpp':
             return 1
