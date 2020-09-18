@@ -22,7 +22,6 @@ for TC in range(4):
     for i in range(6):
         for j in range(3):
             li_1[i][j] = li[i*3+j]
-
     print(li_1)
     v = []
     # for i in range(li_1[0][0]):
