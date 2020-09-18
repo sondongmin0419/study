@@ -24,6 +24,7 @@ for TC in range(4):
             li_1[i][j] = li[i*3+j]
     print(li_1)
     v = []
+    
     # for i in range(li_1[0][0]):
 
     # play(li_1[0])
