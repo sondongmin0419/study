@@ -26,7 +26,7 @@ def f_co(y, x):
     visited = set()
     visited.add((y, x))
 
-    if (y, x) in dic_comstomer:
+    if (y, x) in dic_comstomer and li_map[y][x] == 2:
         li_map[y][x] = 0
         return (y, x)
     else:
