@@ -15,7 +15,6 @@ for i in range(1, N):
     elif li[i] == li[i-1]:
         cnt_p += 1
         cnt_m += 1
-
     if max_cnt < cnt_p:
         max_cnt = cnt_p
     elif max_cnt < cnt_m:
