@@ -34,7 +34,6 @@ for TC in range(1, T+1):
     in_li = list(map(int, input().split()))
     stack = []
     c_stack = []
-    
     for i in range(E):
         if li[in_li[i*2]][0] == 0:
             li[in_li[i * 2]][0] = in_li[i*2+1]
