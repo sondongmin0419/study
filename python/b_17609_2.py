@@ -6,6 +6,7 @@ for TC in range(T):
     if st == st_rev:   #회문판별
         print(0)
     else:   # 회문아닐경우
+        
         i = 0
         while i <= len(st) // 2:   # i가 0부터 문자열길이의 절반까지만 조회
             if st[i] != st_rev[i]:  # 문자열과 reverse한 문자열을 차레로 비교하며 다를경우
