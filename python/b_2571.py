@@ -24,6 +24,7 @@ for y in range(100):
             else:
                 li_1[y][x][1] = 1
         area = li_1[y][x][0] * li_1[y][x][1]
+        
         if area > max_area:
             max_area = area
             maxx = x
