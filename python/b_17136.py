@@ -18,6 +18,7 @@ def play(i):
                     for a in range(i):
                         for b in range(i):
                             li[r + a][c + b] = 0
+                            
                 else:
                     r_c = -1
                     return
