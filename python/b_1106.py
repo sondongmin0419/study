@@ -9,6 +9,7 @@ def min_money(li_m, c_m, c_min):
     result = min(r[c_min:c_m+1])
     return result
 
+
 C, N = map(int, input().split())
 li = [0]*(C+101)
 max_index = 0
