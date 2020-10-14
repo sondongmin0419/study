@@ -13,6 +13,7 @@ def min_money(li_m, c_m, c_min):
 C, N = map(int, input().split())
 li = [0]*(C+101)
 max_index = 0
+
 for TC in range(N):
     mini = list(map(int, input().split()))   # [비용 , 고객수]
     k = 1
