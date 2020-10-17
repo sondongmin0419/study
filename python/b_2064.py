@@ -11,6 +11,7 @@ def d_index():
     return 4
 
 
+
 def d_binary_index():
     for i in range(8):
         for j in range(n):
