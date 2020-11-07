@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open("input_1.txt", "r")
+# import sys
+# sys.stdin = open("input_1.txt", "r")
 
 
 def play(n):
