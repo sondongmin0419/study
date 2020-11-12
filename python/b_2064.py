@@ -18,6 +18,7 @@ def d_binary_index():
                 return i
     return 8
 
+
 def play(n):
     stack = []
     while True:
