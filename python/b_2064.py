@@ -38,6 +38,7 @@ def play(n):
     li_binary.append(stack_reverse)
 
 
+
 li_li = [0] * n
 s = ''
 for i in range(n):
