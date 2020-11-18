@@ -2,6 +2,7 @@ N = int(input())
 
 li = []
 li_s = [[] for _ in range(N)]
+
 for i in range(N):
     li.append(list(map(int, input().split())))
     li_s[i].append((li[i][0], li[i][5]))
