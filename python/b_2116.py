@@ -8,6 +8,7 @@ for i in range(N):
     li_s[i].append((li[i][1], li[i][3]))
     li_s[i].append((li[i][2], li[i][4]))
 max_sum = 0
+
 for n in range(1,7):
     sum_n = 0
     max_n = 0
