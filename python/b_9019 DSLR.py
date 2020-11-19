@@ -67,6 +67,7 @@ for TC in range(1, T + 1):
     total.add(A)
     result_al = ''
     idx = -1
+    
     while stack:
         s_l = len(stack)
         for _ in range(s_l):
