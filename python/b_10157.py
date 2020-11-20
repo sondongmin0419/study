@@ -4,6 +4,8 @@ K = int(input())
 
 dr = [0, 1, 0, -1] # 상 우 하 좌
 dc = [1, 0, -1, 0]
+
+
 def play():
     x = y =1
     cnt = 1
