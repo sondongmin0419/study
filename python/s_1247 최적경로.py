@@ -28,6 +28,7 @@ for TC in range(1, T+1):
     N = int(input())
 
     li = list(map(int, input().split()))
+    
     visited = [0] * N
     com_x = li.pop(0)
     com_y = li.pop(0)
