@@ -36,6 +36,7 @@ for TC in range(1, T+1):
     home_y = li.pop(0)
 
     min_d = 100 * 100 * 10
+    
     d = 0
     play(0, com_x, com_y)
     print('#%d %d' %(TC, min_d))
