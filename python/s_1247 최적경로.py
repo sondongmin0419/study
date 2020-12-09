@@ -35,6 +35,7 @@ for TC in range(1, T+1):
     home_x = li.pop(0)
     home_y = li.pop(0)
 
+
     min_d = 100 * 100 * 10
     
     d = 0
