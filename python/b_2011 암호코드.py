@@ -11,7 +11,7 @@ else:
             li[i] += (li[i-1])
         n = int(num[i-2]) * 10 + int(num[i-1])
         if 10 <= n <= 26:
-            li[i] += (li[i-2] )
+            li[i] += (li[i-2])
 
     print(li[-1]% 1000000)
 
